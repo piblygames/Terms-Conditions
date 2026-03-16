@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sum Threads — Terms &amp; Conditions</title>
+  <style>
+    :root {
+      --bg: #03060f;
+      --panel: #0d1526;
+      --border: #1a2d4a;
+      --cyan: #00d4ff;
+      --gold: #ffd700;
+      --purple: #a855f7;
+      --text: rgba(255,255,255,0.82);
+      --muted: rgba(255,255,255,0.45);
+      --dim: rgba(255,255,255,0.25);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      padding: 0 0 60px;
+    }
+    header {
+      background: linear-gradient(180deg, #0a1228 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 24px 28px;
+      text-align: center;
+    }
+    .game-title {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+    .game-title .sum { background: linear-gradient(135deg,#ff9900,#ffd700,#ff2288); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .game-title .thr { background: linear-gradient(135deg,#00ddff,#55ff99,#bb44ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .by-line  { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.15em; margin-bottom: 10px; }
+    .doc-title { font-size: 0.7rem; background: rgba(192,132,252,0.1); border: 1px solid rgba(192,132,252,0.3); border-radius: 20px; padding: 4px 14px; display: inline-block; color: var(--purple); letter-spacing: 0.1em; font-weight: 700; }
+    .updated { font-size: 0.7rem; color: var(--dim); margin-top: 8px; }
+
+    main { max-width: 720px; margin: 0 auto; padding: 32px 24px 0; }
+
+    .toc {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 36px;
+    }
+    .toc-title { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin-bottom: 4px; }
+    .toc a { color: var(--purple); text-decoration: none; font-size: 0.85rem; }
+    .toc a:hover { text-decoration: underline; }
+
+    section { margin-bottom: 36px; scroll-margin-top: 20px; }
+    h2 {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin-bottom: 12px; color: var(--text); font-size: 0.92rem; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; font-size: 0.92rem; color: var(--text); }
+    li strong { color: rgba(255,255,255,0.9); }
+
+    .highlight {
+      background: rgba(192,132,252,0.06);
+      border: 1px solid rgba(192,132,252,0.18);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+    .highlight p { margin: 0; font-size: 0.88rem; }
+
+    .warning-box {
+      background: rgba(239,68,68,0.06);
+      border: 1px solid rgba(239,68,68,0.2);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+    .warning-box p { margin: 0; font-size: 0.88rem; color: rgba(248,113,113,0.9); }
+
+    .info-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+    .info-card .card-title { font-weight: 800; color: rgba(255,255,255,0.85); font-size: 0.88rem; margin-bottom: 4px; }
+    .info-card p { margin: 0; font-size: 0.82rem; color: var(--muted); }
+
+    .contact-box {
+      background: linear-gradient(135deg, rgba(192,132,252,0.08), rgba(168,85,247,0.04));
+      border: 1px solid rgba(192,132,252,0.25);
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .contact-box a { color: var(--purple); font-weight: 800; font-size: 1rem; }
+
+    .doc-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .doc-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0,212,255,0.06);
+      border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 20px;
+      padding: 6px 14px;
+      color: var(--cyan);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .doc-links a:hover { background: rgba(0,212,255,0.12); }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px 0;
+      font-size: 0.72rem;
+      color: var(--dim);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="game-title">
+    <span class="sum">SUM</span><span class="thr">THREADS</span>
+  </div>
+  <div class="by-line">BY PIBLY GAMES</div>
+  <div class="doc-title">📋 TERMS &amp; CONDITIONS</div>
+  <div class="updated">Last updated: March 2026</div>
+</header>
+
+<main>
+
+  <!-- Table of Contents -->
+  <nav class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#license">License to Play</a></li>
+      <li><a href="#virtual-goods">Virtual Currency &amp; Items</a></li>
+      <li><a href="#advertisements">Advertisements</a></li>
+      <li><a href="#conduct">User Conduct</a></li>
+      <li><a href="#ip">Intellectual Property</a></li>
+      <li><a href="#disclaimers">Disclaimer of Warranties</a></li>
+      <li><a href="#liability">Limitation of Liability</a></li>
+      <li><a href="#updates">Updates &amp; Availability</a></li>
+      <li><a href="#governing-law">Governing Law</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. Acceptance -->
+  <section id="acceptance">
+    <h2>1. Acceptance of Terms</h2>
+    <p>By downloading, installing, or playing <strong>Sum Threads</strong>, you agree to be bound by these Terms &amp; Conditions. If you do not agree to these terms, please do not download or use the app.</p>
+    <p>These terms apply to all users of Sum Threads worldwide. They should be read alongside our <a href="privacy.html" style="color:var(--cyan)">Privacy Policy</a>, which explains how we collect and use data.</p>
+    <div class="highlight">
+      <p>If you are under 13 years of age, you are not permitted to use Sum Threads. By using the app you confirm that you are at least 13 years old.</p>
+    </div>
+  </section>
+
+  <!-- 2. License -->
+  <section id="license">
+    <h2>2. License to Play</h2>
+    <p>Pibly Games grants you a personal, non-exclusive, non-transferable, revocable licence to download and play Sum Threads solely for your personal, non-commercial entertainment purposes, subject to these Terms.</p>
+    <p>This licence does not include the right to:</p>
+    <ul>
+      <li>Copy, modify, adapt, translate, or create derivative works of the game</li>
+      <li>Distribute, sell, resell, sublicense, or otherwise transfer the game or any part of it</li>
+      <li>Reverse-engineer, decompile, disassemble, or attempt to derive the source code</li>
+      <li>Remove or alter any proprietary notices, labels, or marks on the game</li>
+      <li>Use the game for any commercial purpose or for any public display</li>
+    </ul>
+  </section>
+
+  <!-- 3. Virtual Goods -->
+  <section id="virtual-goods">
+    <h2>3. Virtual Currency &amp; Items</h2>
+    <div class="info-card">
+      <div class="card-title">Coins</div>
+      <p>In-game currency earned by completing levels, watching rewarded ads, and daily rewards. Used to purchase boosters and unlock content.</p>
+    </div>
+    <div class="info-card">
+      <div class="card-title">Boosters (Hint, Hammer, Swap)</div>
+      <p>Single-use in-game items purchased with coins. Consumed on use and cannot be refunded.</p>
+    </div>
+    <div class="info-card">
+      <div class="card-title">Skins</div>
+      <p>Cosmetic ball styles unlocked with coins. Persistent once unlocked.</p>
+    </div>
+    <div class="info-card">
+      <div class="card-title">Lives</div>
+      <p>Refill automatically over time. Can be replenished early using coins or by watching a rewarded ad.</p>
+    </div>
+    <div class="warning-box" style="margin-top:14px">
+      <p>All virtual currency and items are virtual goods with <strong>no real-world monetary value</strong>. They cannot be transferred between accounts, sold, or exchanged for real money. Pibly Games reserves the right to modify, rebalance, or remove virtual goods at any time without compensation.</p>
+    </div>
+    <p>All game progress, coins, and items are stored locally on your device. <strong>Uninstalling the app permanently deletes all progress.</strong> We are not responsible for loss of progress due to device changes, factory resets, or uninstallation.</p>
+  </section>
+
+  <!-- 4. Advertisements -->
+  <section id="advertisements">
+    <h2>4. Advertisements</h2>
+    <p>Sum Threads is free to play and supported by advertising served by <strong>Google AdMob</strong>.</p>
+    <ul>
+      <li><strong>Banner ads</strong> — displayed during gameplay. Non-personalised by default; personalised with your consent in the EEA/UK.</li>
+      <li><strong>Rewarded ads</strong> — entirely optional. You choose to watch a rewarded ad in exchange for in-game rewards (coins, lives). You can always decline without penalty.</li>
+    </ul>
+    <p>Non-personalised ads are always shown to keep the game free. In the EEA and UK, personalised ads are only shown with your explicit consent, which you can withdraw at any time via <strong>Settings → Ad Preferences</strong> in the app.</p>
+    <p>We have no control over the content of ads served by Google AdMob. For questions about ad content, please refer to Google's advertising policies.</p>
+  </section>
+
+  <!-- 5. Conduct -->
+  <section id="conduct">
+    <h2>5. User Conduct</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use any cheats, exploits, automation software, bots, hacks, or any other unauthorised third-party software that modifies or interferes with the game</li>
+      <li>Attempt to gain unauthorised access to the game's systems or another user's data</li>
+      <li>Exploit bugs or glitches rather than reporting them to us</li>
+      <li>Manipulate the local save data to obtain unfair advantages</li>
+    </ul>
+    <p>Violation of these rules may result in your progress being reset or access to the app being restricted. We reserve the right to take appropriate action at our sole discretion.</p>
+  </section>
+
+  <!-- 6. Intellectual Property -->
+  <section id="ip">
+    <h2>6. Intellectual Property</h2>
+    <p>All content in Sum Threads — including but not limited to graphics, SVG artwork, audio, sound effects, game design, level design, code, the "Sum Threads" name, the Pibly Games name, the Orby mascot, and all branding — is owned by <strong>Pibly Games</strong> and protected by applicable copyright, trademark, and intellectual property laws.</p>
+    <p>You may not reproduce, distribute, display, sell, or create derivative works from any content within the game without prior written permission from Pibly Games.</p>
+    <p>Screenshots of your own gameplay may be shared on social media for personal, non-commercial purposes.</p>
+  </section>
+
+  <!-- 7. Disclaimers -->
+  <section id="disclaimers">
+    <h2>7. Disclaimer of Warranties</h2>
+    <p>Sum Threads is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranties of any kind, either express or implied. To the fullest extent permitted by applicable law, Pibly Games disclaims all warranties including but not limited to:</p>
+    <ul>
+      <li>Implied warranties of merchantability and fitness for a particular purpose</li>
+      <li>That the game will be uninterrupted, error-free, or free of viruses or harmful components</li>
+      <li>That defects will be corrected</li>
+      <li>That the game will be available in your region at all times</li>
+    </ul>
+    <p>Your use of Sum Threads is at your own risk.</p>
+  </section>
+
+  <!-- 8. Liability -->
+  <section id="liability">
+    <h2>8. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, <strong>Pibly Games shall not be liable</strong> for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use Sum Threads, including but not limited to:</p>
+    <ul>
+      <li>Loss of in-game progress, coins, or virtual items</li>
+      <li>Data loss due to device failure, uninstallation, or software updates</li>
+      <li>Any interruption or cessation of the game</li>
+      <li>Any bugs, viruses, or errors in the game</li>
+    </ul>
+    <p>Our total liability to you for any claim arising out of or relating to these Terms or your use of Sum Threads shall not exceed the amount you paid us in the twelve months preceding the claim (which, for a free app with no IAP, is zero).</p>
+  </section>
+
+  <!-- 9. Updates -->
+  <section id="updates">
+    <h2>9. Updates &amp; Availability</h2>
+    <p>Pibly Games reserves the right to:</p>
+    <ul>
+      <li>Update, modify, or add features to Sum Threads at any time</li>
+      <li>Discontinue Sum Threads or any part of it at any time without notice</li>
+      <li>Change these Terms at any time — continued use after changes constitutes acceptance</li>
+    </ul>
+    <p>We are not liable for any loss or inconvenience arising from the modification or discontinuation of the game. We recommend keeping the app updated to the latest version for the best experience and security.</p>
+  </section>
+
+  <!-- 10. Governing Law -->
+  <section id="governing-law">
+    <h2>10. Governing Law</h2>
+    <p>These Terms &amp; Conditions are governed by and construed in accordance with the laws of <strong>India</strong>, without regard to conflict of law principles.</p>
+    <p>Any disputes arising out of or relating to these Terms or your use of Sum Threads shall be subject to the exclusive jurisdiction of the competent courts located in <strong>India</strong>.</p>
+    <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+  </section>
+
+  <!-- 11. Contact -->
+  <section id="contact">
+    <h2>11. Contact</h2>
+    <div class="contact-box">
+      <p style="color:var(--muted);font-size:0.85rem;margin-bottom:10px">Questions about these Terms &amp; Conditions?</p>
+      <a href="mailto:piblygames@gmail.com">piblygames@gmail.com</a>
+      <p style="color:var(--dim);font-size:0.72rem;margin-top:10px;margin-bottom:0">Pibly Games · Sum Threads</p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Pibly Games. All rights reserved.</p>
+  <p style="margin-top:4px"><a href="mailto:piblygames@gmail.com" style="color:var(--dim)">piblygames@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
